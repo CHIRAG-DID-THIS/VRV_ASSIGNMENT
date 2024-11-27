@@ -1,9 +1,11 @@
-
 # **RBAC UI - Role-Based Access Control**
 
 This project is a **Role-Based Access Control (RBAC)** UI, built to manage users, roles, and permissions within an application. It allows administrators to create, manage, and modify users, assign roles, and manage permissions for various roles in the system.
 
+---
+
 ## **Features**
+
 - **User Management**: Create, edit, delete, and search users.
 - **Role Management**: Add, update, delete roles, and assign them to users.
 - **Permissions Management**: Assign permissions like Read, Write, Delete, etc., to roles.
