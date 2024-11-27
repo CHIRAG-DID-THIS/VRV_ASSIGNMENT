@@ -1,70 +1,142 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+```markdown
+# **RBAC UI - Role-Based Access Control**
 
-In the project directory, you can run:
+This project is a **Role-Based Access Control (RBAC)** UI, built to manage users, roles, and permissions within an application. It allows administrators to create, manage, and modify users, assign roles, and manage permissions for various roles in the system.
 
-### `npm start`
+## **Features**
+- **User Management**: Create, edit, delete, and search users.
+- **Role Management**: Add, update, delete roles, and assign them to users.
+- **Permissions Management**: Assign permissions like Read, Write, Delete, etc., to roles.
+- **Charts and Analytics**: View user distribution based on roles and status.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Technologies Used**
 
-### `npm test`
+- **Frontend**: React.js, TailwindCSS
+- **Charts**: React-Chartjs-2 (Pie, Bar charts)
+- **Backend**: JSON Server for mock backend (using `http://localhost:5000`)
+- **Authentication (Optional)**: JWT (JSON Web Tokens) for secure authentication.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Project Setup**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. **Clone the Repository**
+```bash
+git clone git@github.com:CHIRAG-DID-THIS/VRV_ASSIGNMENT.git
+cd VRV_ASSIGNMENT
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. **Install Dependencies**
+Make sure you have **Node.js** installed. Then, run the following commands to install the required dependencies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the frontend:
+```bash
+npm install
+```
 
-### `npm run eject`
+For the backend (if using a mock API with JSON Server):
+```bash
+cd server
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. **Start the Development Server**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For the frontend:
+```bash
+npm start
+```
+This will start the app at [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For the backend:
+```bash
+npm run server
+```
+This will start the mock backend at [http://localhost:5000](http://localhost:5000).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **Screenshots**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here are a few screenshots demonstrating the project in action:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Dashboard
+![Dashboard](./public/assets/image1.png)
+*Figure 1: Dashboard showing user stats and charts.*
 
-### Code Splitting
+### 2. User Management
+![User](./public/assets/image2.png)
+*Figure 2: User management page showing the user list and actions.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Role Management
+![Role](./public/assets/image3.png)
+*Figure 3: Role management page with a list of roles and their associated actions.*
 
-### Analyzing the Bundle Size
+### 4. Permissions Management
+![Permission](./public/assets/image4.png)
+*Figure 4: Permissions management page where roles can be assigned specific permissions.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **API Documentation**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Users**
+- **GET /users**: Fetch all users
+- **POST /users**: Create a new user
+- **PUT /users/:id**: Update an existing user by ID
+- **DELETE /users/:id**: Delete a user by ID
 
-### Advanced Configuration
+### **Roles**
+- **GET /roles**: Fetch all roles
+- **POST /roles**: Create a new role
+- **PUT /roles/:id**: Update an existing role by ID
+- **DELETE /roles/:id**: Delete a role by ID
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **Permissions**
+- **GET /permissions**: Fetch all permissions
+- **POST /permissions**: Create new permissions (if applicable)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## **Deployment Instructions**
 
-### `npm run build` fails to minify
+### **Frontend Deployment (Netlify)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Create an Account on Netlify**:
+   Go to [Netlify](https://www.netlify.com/) and create an account.
+
+2. **Link GitHub Repository to Netlify**:
+   - On your Netlify dashboard, click **"New Site from Git"**.
+   - Connect your GitHub repository with Netlify and select the branch to deploy (usually `main`).
+
+3. **Deploy**:
+   Once connected, Netlify will automatically detect the build settings and deploy your site. It will use `npm run build` for the production build and deploy it.
+
+4. **Access Your Site**:
+   After the deployment, you'll get a URL to access your live site.
+
+
+## **How to Contribute**
+
+We welcome contributions! Please fork this repository, create a branch for your feature, and submit a pull request. You can contribute in the following ways:
+- Report bugs and create issues
+- Add new features
+- Improve documentation
+
+---
+
+## **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## **Authors**
+
+- **Your Name**: [GitHub Profile](https://github.com/CHIRAG-DID-THIS)
+---
+

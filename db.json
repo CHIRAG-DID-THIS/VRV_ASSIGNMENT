@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "status": "Active"
+    },
+    {
+      "name": "",
+      "role": "Editor",
+      "status": "Active",
+      "id": "2"
+    },
+    {
+      "name": "Alice Johnson",
+      "role": "Editor",
+      "status": "Active",
+      "id": "3"
+    },
+    {
+      "name": "Chirag Garg",
+      "role": "intern analyst",
+      "status": "Inactive",
+      "id": "42c6"
+    }
+  ],
+  "roles": [
+    {
+      "name": "Admin",
+      "permissions": [
+        "Read",
+        "Write",
+        "Delete",
+        "View Reports"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "permissions": [
+        "View Reports",
+        "Delete",
+        "Write"
+      ]
+    },
+    {
+      "id": "c952",
+      "name": "TOP GUN",
+      "permissions": [
+        "Delete",
+        "Write"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "name": "Read"
+    },
+    {
+      "id": "2",
+      "name": "Write"
+    },
+    {
+      "id": "3",
+      "name": "Delete"
+    }
+  ]
+}
